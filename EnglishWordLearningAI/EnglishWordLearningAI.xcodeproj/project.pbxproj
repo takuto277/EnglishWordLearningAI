@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ABB884CD2B76754B00B638C2 /* EnglishWordLearningAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB884CC2B76754B00B638C2 /* EnglishWordLearningAIApp.swift */; };
+		ABB884CF2B76754B00B638C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB884CE2B76754B00B638C2 /* ContentView.swift */; };
+		ABB884D12B76754B00B638C2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB884D02B76754B00B638C2 /* Item.swift */; };
+		ABB884D32B76754D00B638C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB884D22B76754D00B638C2 /* Assets.xcassets */; };
+		ABB884D62B76754D00B638C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB884D52B76754D00B638C2 /* Preview Assets.xcassets */; };
+		ABB884E02B76754E00B638C2 /* EnglishWordLearningAITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB884DF2B76754E00B638C2 /* EnglishWordLearningAITests.swift */; };
+		ABB884EA2B76754E00B638C2 /* EnglishWordLearningAIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB884E92B76754E00B638C2 /* EnglishWordLearningAIUITests.swift */; };
+		ABB884EC2B76754E00B638C2 /* EnglishWordLearningAIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB884EB2B76754E00B638C2 /* EnglishWordLearningAIUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ABB884DC2B76754E00B638C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABB884C12B76754B00B638C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABB884C82B76754B00B638C2;
+			remoteInfo = EnglishWordLearningAI;
+		};
+		ABB884E62B76754E00B638C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABB884C12B76754B00B638C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABB884C82B76754B00B638C2;
+			remoteInfo = EnglishWordLearningAI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ABB884C92B76754B00B638C2 /* EnglishWordLearningAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishWordLearningAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABB884CC2B76754B00B638C2 /* EnglishWordLearningAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishWordLearningAIApp.swift; sourceTree = "<group>"; };
+		ABB884CE2B76754B00B638C2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ABB884D02B76754B00B638C2 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		ABB884D22B76754D00B638C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ABB884D52B76754D00B638C2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ABB884DB2B76754E00B638C2 /* EnglishWordLearningAITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnglishWordLearningAITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABB884DF2B76754E00B638C2 /* EnglishWordLearningAITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishWordLearningAITests.swift; sourceTree = "<group>"; };
+		ABB884E52B76754E00B638C2 /* EnglishWordLearningAIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnglishWordLearningAIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABB884E92B76754E00B638C2 /* EnglishWordLearningAIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishWordLearningAIUITests.swift; sourceTree = "<group>"; };
+		ABB884EB2B76754E00B638C2 /* EnglishWordLearningAIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishWordLearningAIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABB884C62B76754B00B638C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABB884D82B76754E00B638C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABB884E22B76754E00B638C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABB884C02B76754B00B638C2 = {
+			isa = PBXGroup;
+			children = (
+				ABB884CB2B76754B00B638C2 /* EnglishWordLearningAI */,
+				ABB884DE2B76754E00B638C2 /* EnglishWordLearningAITests */,
+				ABB884E82B76754E00B638C2 /* EnglishWordLearningAIUITests */,
+				ABB884CA2B76754B00B638C2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABB884CA2B76754B00B638C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABB884C92B76754B00B638C2 /* EnglishWordLearningAI.app */,
+				ABB884DB2B76754E00B638C2 /* EnglishWordLearningAITests.xctest */,
+				ABB884E52B76754E00B638C2 /* EnglishWordLearningAIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABB884CB2B76754B00B638C2 /* EnglishWordLearningAI */ = {
+			isa = PBXGroup;
+			children = (
+				ABB884CC2B76754B00B638C2 /* EnglishWordLearningAIApp.swift */,
+				ABB884CE2B76754B00B638C2 /* ContentView.swift */,
+				ABB884D02B76754B00B638C2 /* Item.swift */,
+				ABB884D22B76754D00B638C2 /* Assets.xcassets */,
+				ABB884D42B76754D00B638C2 /* Preview Content */,
+			);
+			path = EnglishWordLearningAI;
+			sourceTree = "<group>";
+		};
+		ABB884D42B76754D00B638C2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				ABB884D52B76754D00B638C2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ABB884DE2B76754E00B638C2 /* EnglishWordLearningAITests */ = {
+			isa = PBXGroup;
+			children = (
+				ABB884DF2B76754E00B638C2 /* EnglishWordLearningAITests.swift */,
+			);
+			path = EnglishWordLearningAITests;
+			sourceTree = "<group>";
+		};
+		ABB884E82B76754E00B638C2 /* EnglishWordLearningAIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ABB884E92B76754E00B638C2 /* EnglishWordLearningAIUITests.swift */,
+				ABB884EB2B76754E00B638C2 /* EnglishWordLearningAIUITestsLaunchTests.swift */,
+			);
+			path = EnglishWordLearningAIUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABB884C82B76754B00B638C2 /* EnglishWordLearningAI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABB884EF2B76754E00B638C2 /* Build configuration list for PBXNativeTarget "EnglishWordLearningAI" */;
+			buildPhases = (
+				ABB884C52B76754B00B638C2 /* Sources */,
+				ABB884C62B76754B00B638C2 /* Frameworks */,
+				ABB884C72B76754B00B638C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EnglishWordLearningAI;
+			productName = EnglishWordLearningAI;
+			productReference = ABB884C92B76754B00B638C2 /* EnglishWordLearningAI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ABB884DA2B76754E00B638C2 /* EnglishWordLearningAITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABB884F22B76754E00B638C2 /* Build configuration list for PBXNativeTarget "EnglishWordLearningAITests" */;
+			buildPhases = (
+				ABB884D72B76754E00B638C2 /* Sources */,
+				ABB884D82B76754E00B638C2 /* Frameworks */,
+				ABB884D92B76754E00B638C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABB884DD2B76754E00B638C2 /* PBXTargetDependency */,
+			);
+			name = EnglishWordLearningAITests;
+			productName = EnglishWordLearningAITests;
+			productReference = ABB884DB2B76754E00B638C2 /* EnglishWordLearningAITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ABB884E42B76754E00B638C2 /* EnglishWordLearningAIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABB884F52B76754E00B638C2 /* Build configuration list for PBXNativeTarget "EnglishWordLearningAIUITests" */;
+			buildPhases = (
+				ABB884E12B76754E00B638C2 /* Sources */,
+				ABB884E22B76754E00B638C2 /* Frameworks */,
+				ABB884E32B76754E00B638C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABB884E72B76754E00B638C2 /* PBXTargetDependency */,
+			);
+			name = EnglishWordLearningAIUITests;
+			productName = EnglishWordLearningAIUITests;
+			productReference = ABB884E52B76754E00B638C2 /* EnglishWordLearningAIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABB884C12B76754B00B638C2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					ABB884C82B76754B00B638C2 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					ABB884DA2B76754E00B638C2 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = ABB884C82B76754B00B638C2;
+					};
+					ABB884E42B76754E00B638C2 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = ABB884C82B76754B00B638C2;
+					};
+				};
+			};
+			buildConfigurationList = ABB884C42B76754B00B638C2 /* Build configuration list for PBXProject "EnglishWordLearningAI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ABB884C02B76754B00B638C2;
+			productRefGroup = ABB884CA2B76754B00B638C2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABB884C82B76754B00B638C2 /* EnglishWordLearningAI */,
+				ABB884DA2B76754E00B638C2 /* EnglishWordLearningAITests */,
+				ABB884E42B76754E00B638C2 /* EnglishWordLearningAIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABB884C72B76754B00B638C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB884D62B76754D00B638C2 /* Preview Assets.xcassets in Resources */,
+				ABB884D32B76754D00B638C2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABB884D92B76754E00B638C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABB884E32B76754E00B638C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABB884C52B76754B00B638C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB884CF2B76754B00B638C2 /* ContentView.swift in Sources */,
+				ABB884D12B76754B00B638C2 /* Item.swift in Sources */,
+				ABB884CD2B76754B00B638C2 /* EnglishWordLearningAIApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABB884D72B76754E00B638C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB884E02B76754E00B638C2 /* EnglishWordLearningAITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABB884E12B76754E00B638C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB884EA2B76754E00B638C2 /* EnglishWordLearningAIUITests.swift in Sources */,
+				ABB884EC2B76754E00B638C2 /* EnglishWordLearningAIUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ABB884DD2B76754E00B638C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABB884C82B76754B00B638C2 /* EnglishWordLearningAI */;
+			targetProxy = ABB884DC2B76754E00B638C2 /* PBXContainerItemProxy */;
+		};
+		ABB884E72B76754E00B638C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABB884C82B76754B00B638C2 /* EnglishWordLearningAI */;
+			targetProxy = ABB884E62B76754E00B638C2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		ABB884ED2B76754E00B638C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ABB884EE2B76754E00B638C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ABB884F02B76754E00B638C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EnglishWordLearningAI/Preview Content\"";
+				DEVELOPMENT_TEAM = 7Q2YLS5S6Q;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ON.EnglishWordLearningAI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ABB884F12B76754E00B638C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EnglishWordLearningAI/Preview Content\"";
+				DEVELOPMENT_TEAM = 7Q2YLS5S6Q;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ON.EnglishWordLearningAI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ABB884F32B76754E00B638C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7Q2YLS5S6Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ON.EnglishWordLearningAITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EnglishWordLearningAI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EnglishWordLearningAI";
+			};
+			name = Debug;
+		};
+		ABB884F42B76754E00B638C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7Q2YLS5S6Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ON.EnglishWordLearningAITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EnglishWordLearningAI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EnglishWordLearningAI";
+			};
+			name = Release;
+		};
+		ABB884F62B76754E00B638C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7Q2YLS5S6Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ON.EnglishWordLearningAIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EnglishWordLearningAI;
+			};
+			name = Debug;
+		};
+		ABB884F72B76754E00B638C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7Q2YLS5S6Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ON.EnglishWordLearningAIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EnglishWordLearningAI;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABB884C42B76754B00B638C2 /* Build configuration list for PBXProject "EnglishWordLearningAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABB884ED2B76754E00B638C2 /* Debug */,
+				ABB884EE2B76754E00B638C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABB884EF2B76754E00B638C2 /* Build configuration list for PBXNativeTarget "EnglishWordLearningAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABB884F02B76754E00B638C2 /* Debug */,
+				ABB884F12B76754E00B638C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABB884F22B76754E00B638C2 /* Build configuration list for PBXNativeTarget "EnglishWordLearningAITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABB884F32B76754E00B638C2 /* Debug */,
+				ABB884F42B76754E00B638C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABB884F52B76754E00B638C2 /* Build configuration list for PBXNativeTarget "EnglishWordLearningAIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABB884F62B76754E00B638C2 /* Debug */,
+				ABB884F72B76754E00B638C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABB884C12B76754B00B638C2 /* Project object */;
+}
