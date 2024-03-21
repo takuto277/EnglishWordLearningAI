@@ -8,34 +8,63 @@
 import SwiftUI
 import SwiftData
 
+enum NavigationPath: Hashable {
+    case pathWordList
+    case pathInputWord
+}
+
 struct ContentView: View {
+    @State private var navigationPath: [NavigationPath] = []
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+        NavigationStack(path: $navigationPath) {
+            GeometryReader { geometry in
+                VStack {
+                    List {
+                        ForEach(items) { item in
+                            NavigationLink {
+                                Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                            } label: {
+                                Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                            }
+                        }
+                        .onDelete(perform: deleteItems)
+                    }
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            EditButton()
+                        }
+                        ToolbarItem {
+                            Button(action: addItem) {
+                                Label("Add Item", systemImage: "plus")
+                            }
+                        }
+                    }
+                    Spacer()
+                    Button {
+                        navigationPath.append(.pathInputWord)
                     } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                        Text("英文作成画面へ")
+                            .padding()
+
                     }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
+                    .padding()
+                    .frame(width: geometry.size.width * 0.5, height: geometry.size.height * 0.05, alignment: .center)
+                    .background(Color.mint)
+                    .cornerRadius(10)
+                    Spacer()
                 }
             }
-        } detail: {
-            Text("Select an item")
+            .navigationDestination(for: NavigationPath.self) { value in
+                switch value {
+                case .pathWordList:
+                    ContentView()
+                case .pathInputWord:
+                    InputWordView()
+                }
+            }
         }
     }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		999F22822BAA9CBB007AE058 /* InputWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999F22812BAA9CBB007AE058 /* InputWordView.swift */; };
+		999F22842BAAA56C007AE058 /* DesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999F22832BAAA56C007AE058 /* DesignView.swift */; };
 		ABB884CD2B76754B00B638C2 /* EnglishWordLearningAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB884CC2B76754B00B638C2 /* EnglishWordLearningAIApp.swift */; };
 		ABB884CF2B76754B00B638C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB884CE2B76754B00B638C2 /* ContentView.swift */; };
 		ABB884D12B76754B00B638C2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB884D02B76754B00B638C2 /* Item.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		999F22812BAA9CBB007AE058 /* InputWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputWordView.swift; sourceTree = "<group>"; };
+		999F22832BAAA56C007AE058 /* DesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignView.swift; sourceTree = "<group>"; };
 		ABB884C92B76754B00B638C2 /* EnglishWordLearningAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishWordLearningAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB884CC2B76754B00B638C2 /* EnglishWordLearningAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishWordLearningAIApp.swift; sourceTree = "<group>"; };
 		ABB884CE2B76754B00B638C2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +77,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		999F227F2BAA98E6007AE058 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				999F22812BAA9CBB007AE058 /* InputWordView.swift */,
+				999F22832BAAA56C007AE058 /* DesignView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		999F22802BAA98F9007AE058 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		ABB884C02B76754B00B638C2 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +116,8 @@
 		ABB884CB2B76754B00B638C2 /* EnglishWordLearningAI */ = {
 			isa = PBXGroup;
 			children = (
+				999F22802BAA98F9007AE058 /* ViewModels */,
+				999F227F2BAA98E6007AE058 /* Views */,
 				ABB884CC2B76754B00B638C2 /* EnglishWordLearningAIApp.swift */,
 				ABB884CE2B76754B00B638C2 /* ContentView.swift */,
 				ABB884D02B76754B00B638C2 /* Item.swift */,
@@ -261,6 +283,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABB884CF2B76754B00B638C2 /* ContentView.swift in Sources */,
+				999F22822BAA9CBB007AE058 /* InputWordView.swift in Sources */,
+				999F22842BAAA56C007AE058 /* DesignView.swift in Sources */,
 				ABB884D12B76754B00B638C2 /* Item.swift in Sources */,
 				ABB884CD2B76754B00B638C2 /* EnglishWordLearningAIApp.swift in Sources */,
 			);
@@ -426,7 +450,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EnglishWordLearningAI/Preview Content\"";
-				DEVELOPMENT_TEAM = 7Q2YLS5S6Q;
+				DEVELOPMENT_TEAM = 52LU863YVH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -434,6 +458,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,7 +480,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EnglishWordLearningAI/Preview Content\"";
-				DEVELOPMENT_TEAM = 7Q2YLS5S6Q;
+				DEVELOPMENT_TEAM = 52LU863YVH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -463,6 +488,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
