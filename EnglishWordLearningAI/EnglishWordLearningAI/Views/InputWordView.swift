@@ -13,7 +13,7 @@ struct InputWordView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: .center) {
-                TopDesign(title: "単語一覧", height: 250, yOffset: -120)
+                TopDesign(title: "英文作成", height: 250, yOffset: -120)
                 
                 BottomDesign(height: 150, yOffset: geometry.size.height)
             }
