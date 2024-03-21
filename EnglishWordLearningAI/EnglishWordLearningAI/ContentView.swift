@@ -11,6 +11,7 @@ import SwiftData
 enum NavigationPath: Hashable {
     case pathWordList
     case pathInputWord
+    case pathSelectSentence
 }
 
 struct ContentView: View {
@@ -62,7 +63,10 @@ struct ContentView: View {
                 case .pathWordList:
                     ContentView()
                 case .pathInputWord:
-                    InputWordView()
+                    InputWordView(navigationPath: $navigationPath)
+                case .pathSelectSentence:
+                 //TODO: 文章選択画面に遷移
+                    InputWordView(navigationPath: $navigationPath)
                 }
             }
         }
