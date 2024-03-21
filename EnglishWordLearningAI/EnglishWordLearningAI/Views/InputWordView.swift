@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct InputWordView: View {
+struct InputWordView<ViewModel: InputWordViewModel>: View {
     @Binding var navigationPath: [NavigationPath]
+    @ObservedObject var viewModel: ViewModel
     @State private var text: String = ""
     var body: some View {
         GeometryReader { geometry in
@@ -36,7 +37,7 @@ struct InputWordView: View {
                 .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.15)
                 
                 Button {
-                    navigationPath.append(.pathSelectSentence)
+                    navigationPath.append(.pathSelectSentence(viewModel.getNewWordData()))
                 } label: {
                     Text("英文作成")
                         .font(.custom("STBaoliTC-Regular", size: 15))
@@ -67,6 +68,6 @@ struct InputWordView: View {
 struct InputWordView_Previews: PreviewProvider {
     static var previews: some View {
         @State var navigationPath: [NavigationPath] = []
-        InputWordView(navigationPath: $navigationPath)
+        InputWordView(navigationPath: $navigationPath, viewModel: InputWordViewModel())
     }
 }

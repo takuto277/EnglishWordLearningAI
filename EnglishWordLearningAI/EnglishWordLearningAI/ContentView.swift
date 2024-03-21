@@ -11,7 +11,8 @@ import SwiftData
 enum NavigationPath: Hashable {
     case pathWordList
     case pathInputWord
-    case pathSelectSentence
+    case pathSelectSentence(NewWordData)
+    case pathSelectImage
 }
 
 struct ContentView: View {
@@ -63,10 +64,15 @@ struct ContentView: View {
                 case .pathWordList:
                     ContentView()
                 case .pathInputWord:
-                    InputWordView(navigationPath: $navigationPath)
-                case .pathSelectSentence:
-                 //TODO: 文章選択画面に遷移
-                    InputWordView(navigationPath: $navigationPath)
+                    InputWordView(navigationPath: $navigationPath, viewModel: InputWordViewModel())
+                        .navigationBarBackButtonHidden(true)
+                case .pathSelectSentence(let newWordData):
+                    SelectSentenceView(navigationPath: $navigationPath, viewModel: SelectSentenceViewModel(newWordData: newWordData))
+                        .navigationBarBackButtonHidden(true)
+                case .pathSelectImage:
+                    //TODO: イメージ画像選択に遷移
+                    ContentView()
+                        .navigationBarBackButtonHidden(true)
                 }
             }
         }
