@@ -11,7 +11,7 @@ struct SelectSentenceView<ViewModel: SelectSentenceViewModel>: View {
     @Binding var navigationPath: [NavigationPath]
     @ObservedObject var viewModel: ViewModel
     @Environment(\.dismiss) var dismiss
-    @State var selectedSentenceNumber: Int?
+
     var body: some View {
         GeometryReader { geometry in
             // 背景デザイン
@@ -36,7 +36,7 @@ struct SelectSentenceView<ViewModel: SelectSentenceViewModel>: View {
                 List {
                     ForEach(Array(viewModel.newWordData.response.enumerated()), id: \.1) { index, element in
                         Button {
-                            self.selectedSentenceNumber = index
+                            viewModel.setSentenceNumber(number: index)
                         } label: {
                             Text(element.englishSentence)
                                 .font(.custom("STBaoliTC-Regular", size: 15))
@@ -47,7 +47,7 @@ struct SelectSentenceView<ViewModel: SelectSentenceViewModel>: View {
                                 .foregroundColor(.gray)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
-                        .background(self.selectedSentenceNumber == index ? Color.positivePush : Color.clear)
+                        .background(viewModel.getSelectedSentenceNumber() == index ? Color.positivePush : Color.clear)
                     }
                 }
                 
