@@ -10,44 +10,32 @@ import SwiftUI
 struct TopDesign: View {
     let title: String
     let height: CGFloat
-    let yOffset: CGFloat
+    let width: CGFloat
     
     var body: some View {
         ZStack {
-            Rectangle()
-                .fill(Color.designBackground)
-                .frame(height: height)
-                .offset(y: yOffset)
-            // 半円形
-            Ellipse()
-                .foregroundColor(Color.designBackground)
-                .frame(height: 70) // 半円の直径と高さ
-                .offset(y: 0)
+            Image("topDesign")
+                .resizable()
+                .frame(width: width, height: height)
             
             Text(title)
                      .foregroundColor(.black)
                      .font(.title)
                      .fontWeight(.bold)
-                     .padding(.top, -50)
+                     .padding(.top)
         }
     }
 }
 
 struct BottomDesign: View {
     let height: CGFloat
-    let yOffset: CGFloat
+    let width: CGFloat
     
     var body: some View {
         ZStack {
-            Ellipse()
-                .foregroundColor(Color.designBackground)
-                .frame(height: 100)
-                .offset(y: yOffset * 0.91)
-            
-            Rectangle()
-                .fill(Color.designBackground)
-                .frame(height: height)
-                .offset(y: yOffset)
+            Image("bottomDesign")
+                .resizable()
+                .frame(width: width, height: height)
         }
     }
 }

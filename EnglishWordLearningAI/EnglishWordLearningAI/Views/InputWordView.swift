@@ -11,17 +11,10 @@ struct InputWordView<ViewModel: InputWordViewModel>: View {
     @Binding var navigationPath: [NavigationPath]
     @ObservedObject var viewModel: ViewModel
     @State private var text: String = ""
+    @Environment(\.dismiss) var dismiss
     var body: some View {
         GeometryReader { geometry in
-            ZStack(alignment: .center) {
-                TopDesign(title: "英文作成", height: 250, yOffset: -120)
-                
-                BottomDesign(height: 150, yOffset: geometry.size.height)
-            }
-            .edgesIgnoringSafeArea(.all)
-            
             VStack(alignment: .center) {
-                Spacer().frame(height: geometry.size.height * 0.3)
                 Text("入力された単語で英文を作成します。\n単語を入力してください。")
                     .padding()
                     .multilineTextAlignment(.center)
@@ -66,6 +59,7 @@ struct InputWordView<ViewModel: InputWordViewModel>: View {
 }
 
 struct InputWordView_Previews: PreviewProvider {
+    @Environment(\.dismiss) var dismiss
     static var previews: some View {
         @State var navigationPath: [NavigationPath] = []
         InputWordView(navigationPath: $navigationPath, viewModel: InputWordViewModel())

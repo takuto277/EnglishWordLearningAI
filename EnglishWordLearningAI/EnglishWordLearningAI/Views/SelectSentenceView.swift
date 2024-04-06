@@ -14,17 +14,8 @@ struct SelectSentenceView<ViewModel: SelectSentenceViewModel>: View {
 
     var body: some View {
         GeometryReader { geometry in
-            // 背景デザイン
-            ZStack(alignment: .center) {
-                TopDesign(title: "文章選択", height: 250, yOffset: -120)
-                
-                BottomDesign(height: 150, yOffset: geometry.size.height)
-            }
-            .edgesIgnoringSafeArea(.all)
-            
             // 単語名履歴
             VStack {
-                Spacer().frame(height: 100)
                 Text("単語名:\(viewModel.newWordData.englishWord), \(viewModel.newWordData.japansesWord)")
                     .padding()
                     .multilineTextAlignment(.leading)
