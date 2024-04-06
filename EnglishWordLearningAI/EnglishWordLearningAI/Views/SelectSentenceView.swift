@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SVProgressHUD
 
 struct SelectSentenceView<ViewModel: SelectSentenceViewModel>: View {
     @Binding var navigationPath: [NavigationPath]
@@ -25,7 +26,7 @@ struct SelectSentenceView<ViewModel: SelectSentenceViewModel>: View {
                 
                 // 文章リスト
                 List {
-                    ForEach(Array(viewModel.newWordData.response.enumerated()), id: \.1) { index, element in
+                    ForEach(Array(viewModel.newWordData.response.enumerated()), id: \.0) { index, element in
                         Button {
                             viewModel.setSentenceNumber(number: index)
                         } label: {
@@ -38,7 +39,7 @@ struct SelectSentenceView<ViewModel: SelectSentenceViewModel>: View {
                                 .foregroundColor(.gray)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
-                        .background(viewModel.getSelectedSentenceNumber() == index ? Color.positivePush : Color.clear)
+                        .listRowBackground(viewModel.selectedSentenceNumber == index ? Color.positivePush : Color.clear)
                     }
                 }
                 
