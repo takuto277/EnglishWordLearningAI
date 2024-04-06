@@ -29,15 +29,27 @@ struct InputWordView<ViewModel: InputWordViewModel>: View {
                 .background(Color.textField)
                 .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.15)
                 
-                Button {
-                    navigationPath.append(.pathSelectSentence(viewModel.getNewWordData()))
-                } label: {
-                    Text("英文作成")
-                        .font(.custom("STBaoliTC-Regular", size: 15))
-                        .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.02)
+                HStack {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Text("戻る")
+                            .font(.custom("STBaoliTC-Regular", size: 15))
+                            .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.02)
+                    }
+                    .padding()
+                    .buttonStyle(NegativeButton())
+                    
+                    Button {
+                        navigationPath.append(.pathSelectSentence(viewModel.getNewWordData()))
+                    } label: {
+                        Text("英文作成")
+                            .font(.custom("STBaoliTC-Regular", size: 15))
+                            .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.02)
+                    }
+                    .padding()
+                    .buttonStyle(PositiveButton())
                 }
-                .padding()
-                .buttonStyle(PositiveButton())
             }
             .padding()
             .frame(width: geometry.size.width)
