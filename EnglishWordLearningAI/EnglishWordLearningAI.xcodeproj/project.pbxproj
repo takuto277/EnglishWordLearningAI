@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		993F91872BC13E7F00C15C6E /* SelectImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F91862BC13E7F00C15C6E /* SelectImageView.swift */; };
+		993F91892BC1433F00C15C6E /* SelectImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F91882BC1433F00C15C6E /* SelectImageViewModel.swift */; };
+		993F918C2BC1694200C15C6E /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 993F918B2BC1694200C15C6E /* SVProgressHUD */; };
 		999F22822BAA9CBB007AE058 /* InputWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999F22812BAA9CBB007AE058 /* InputWordView.swift */; };
 		999F22842BAAA56C007AE058 /* DesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999F22832BAAA56C007AE058 /* DesignView.swift */; };
 		999F22862BAC74D3007AE058 /* SelectSentenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999F22852BAC74D3007AE058 /* SelectSentenceView.swift */; };
@@ -41,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		993F91862BC13E7F00C15C6E /* SelectImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageView.swift; sourceTree = "<group>"; };
+		993F91882BC1433F00C15C6E /* SelectImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageViewModel.swift; sourceTree = "<group>"; };
 		999F22812BAA9CBB007AE058 /* InputWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputWordView.swift; sourceTree = "<group>"; };
 		999F22832BAAA56C007AE058 /* DesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignView.swift; sourceTree = "<group>"; };
 		999F22852BAC74D3007AE058 /* SelectSentenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSentenceView.swift; sourceTree = "<group>"; };
@@ -65,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				993F918C2BC1694200C15C6E /* SVProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +97,7 @@
 				999F22812BAA9CBB007AE058 /* InputWordView.swift */,
 				999F22832BAAA56C007AE058 /* DesignView.swift */,
 				999F22852BAC74D3007AE058 /* SelectSentenceView.swift */,
+				993F91862BC13E7F00C15C6E /* SelectImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -100,6 +107,7 @@
 			children = (
 				999F228C2BAC92BF007AE058 /* InputWordViewModel.swift */,
 				999F22872BAC894A007AE058 /* SelectSentenceViewModel.swift */,
+				993F91882BC1433F00C15C6E /* SelectImageViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -188,6 +196,9 @@
 			dependencies = (
 			);
 			name = EnglishWordLearningAI;
+			packageProductDependencies = (
+				993F918B2BC1694200C15C6E /* SVProgressHUD */,
+			);
 			productName = EnglishWordLearningAI;
 			productReference = ABB884C92B76754B00B638C2 /* EnglishWordLearningAI.app */;
 			productType = "com.apple.product-type.application";
@@ -260,6 +271,9 @@
 				Base,
 			);
 			mainGroup = ABB884C02B76754B00B638C2;
+			packageReferences = (
+				993F918A2BC1694200C15C6E /* XCRemoteSwiftPackageReference "SVProgressHUD" */,
+			);
 			productRefGroup = ABB884CA2B76754B00B638C2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -303,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABB884CF2B76754B00B638C2 /* ContentView.swift in Sources */,
+				993F91892BC1433F00C15C6E /* SelectImageViewModel.swift in Sources */,
 				999F22862BAC74D3007AE058 /* SelectSentenceView.swift in Sources */,
 				999F228D2BAC92BF007AE058 /* InputWordViewModel.swift in Sources */,
 				999F22882BAC894A007AE058 /* SelectSentenceViewModel.swift in Sources */,
@@ -310,6 +325,7 @@
 				999F228B2BAC8A18007AE058 /* NewWordData.swift in Sources */,
 				999F22842BAAA56C007AE058 /* DesignView.swift in Sources */,
 				ABB884D12B76754B00B638C2 /* Item.swift in Sources */,
+				993F91872BC13E7F00C15C6E /* SelectImageView.swift in Sources */,
 				ABB884CD2B76754B00B638C2 /* EnglishWordLearningAIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -642,6 +658,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		993F918A2BC1694200C15C6E /* XCRemoteSwiftPackageReference "SVProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVProgressHUD/SVProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		993F918B2BC1694200C15C6E /* SVProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 993F918A2BC1694200C15C6E /* XCRemoteSwiftPackageReference "SVProgressHUD" */;
+			productName = SVProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ABB884C12B76754B00B638C2 /* Project object */;
 }
