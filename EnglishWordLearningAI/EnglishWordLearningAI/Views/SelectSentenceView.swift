@@ -57,6 +57,11 @@ struct SelectSentenceView<ViewModel: SelectSentenceViewModel>: View {
                     Button {
                         // TODO: 選択した文章を用いてイメージ画像作成呼び出し
                         // TODO: その後に遷移: navigationPath.append(.pathSelectImage)
+                        SVProgressHUD.show()
+                        viewModel.getNewImageData { newImageData in
+                            SVProgressHUD.dismiss()
+                            navigationPath.append(.pathSelectImage(newImageData))
+                        }
                     } label: {
                         Text("決定")
                             .font(.custom("STBaoliTC-Regular", size: 15))

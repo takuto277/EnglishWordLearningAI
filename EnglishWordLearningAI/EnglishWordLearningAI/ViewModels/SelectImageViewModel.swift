@@ -6,3 +6,22 @@
 //
 
 import Foundation
+
+final class SelectImageViewModel: ObservableObject {
+    @Published var newImageData: NewImageData
+    @Published var selectedImageNumber: Int?
+    
+    init(newImageData: NewImageData) {
+        self.newImageData = newImageData
+        
+    }
+    
+    func setImageNumber(number: Int) {
+        self.selectedImageNumber = number
+    }
+    
+    func getSelectedImageNumber() -> Int? {
+        return selectedImageNumber
+    }
+    //TODO: 保存処理(Realm)
+}
