@@ -36,4 +36,18 @@ struct RegisterWordData: Decodable, Hashable {
     let englishSentence: String
     let japaneseSentence: String
     let imageString: String
+    var wordNumber: Int = 0
+}
+
+extension RegisterWordData {
+    func toRealmObject() -> RegisterWordDataObject {
+        let realmObject = RegisterWordDataObject()
+        realmObject.englishWord = self.englishWord
+        realmObject.japansesWord = self.japansesWord
+        realmObject.englishSentence = self.englishSentence
+        realmObject.japaneseSentence = self.japaneseSentence
+        realmObject.imageString = self.imageString
+        realmObject.wordNumber = self.wordNumber
+        return realmObject
+    }
 }
