@@ -10,10 +10,16 @@ import Foundation
 final class SelectImageViewModel: ObservableObject {
     @Published var newImageData: NewImageData
     @Published var selectedImageNumber: Int?
+    private var repository: DatabaseRepositoryProtocol?
     
     init(newImageData: NewImageData) {
         self.newImageData = newImageData
-        
+        self.repository = DatabaseRepository()
+    }
+    
+    init(newImageData: NewImageData, repository: DatabaseRepositoryProtocol) {
+        self.newImageData = newImageData
+        self.repository = repository
     }
     
     func setImageNumber(number: Int) {
@@ -24,9 +30,10 @@ final class SelectImageViewModel: ObservableObject {
         return selectedImageNumber
     }
     
-    func register(completion: @escaping (RegisterWordData) -> Void) {
-        
-        guard let selectedImageNumber = selectedImageNumber else {
+    func register(completion: @escaping (RegisterWordData?) -> Void) {
+        guard let selectedImageNumber = selectedImageNumber,
+              let repository = repository else {
+            completion(nil)
             return
         }
         
@@ -35,7 +42,10 @@ final class SelectImageViewModel: ObservableObject {
                                                 englishSentence: newImageData.englishSentence,
                                                 japaneseSentence: newImageData.japaneseSentence,
                                                 imageString: newImageData.imageResponse[selectedImageNumber])
-        completion(registerWordData)
+        if repository.addWord(registerWordData: registerWordData) {
+            completion(registerWordData)
+        } else {
+            completion(nil)
+        }
     }
-    //TODO: 保存処理(Realm)
 }
