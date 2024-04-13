@@ -23,18 +23,20 @@ struct RegisterCompleteView<ViewModel: RegisterCompleteViewModel>: View {
                     .frame(maxWidth: .infinity, alignment: .center)
                 
                 ZStack {
+                    
+                    Circle()
+                        .fill(Color.designBackground)
+                        .frame(width: geometry.size.width * 0.8, height: geometry.size.width * 0.8)
+                    
                     // 画像を表示する部分
                     let data = Data(base64Encoded: viewModel.registerWordData.imageString)
                     Image(uiImage: (UIImage(data: data ?? Data()) ?? UIImage(named: "NoImage")) ?? UIImage())
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 200, height: 200)
+                        .frame(width: geometry.size.width * 0.5, height: geometry.size.width * 0.5)
                     
-                    Circle()
-                        .fill(Color.designBackground)
-                        .frame(width: 100, height: 100)
-                        .offset(y: 50)
                 }
+                .padding()
                 
                 Button {
                     navigationPath.removeAll()
