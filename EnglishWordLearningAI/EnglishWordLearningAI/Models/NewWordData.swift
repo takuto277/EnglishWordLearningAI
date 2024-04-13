@@ -28,3 +28,12 @@ struct NewImageData: Decodable, Hashable {
     let japaneseSentence: String
     let imageResponse: [String]
 }
+
+// 登録完了画面で使用する構造体
+struct RegisterWordData: Decodable, Hashable {
+    let englishWord: String
+    let japansesWord: String
+    let englishSentence: String
+    let japaneseSentence: String
+    let imageString: String
+}

@@ -7,12 +7,46 @@
 
 import SwiftUI
 
-struct RegisterCompleteView: View {
+struct RegisterCompleteView<ViewModel: RegisterCompleteViewModel>: View {
+    @Binding var navigationPath: [NavigationPath]
+    @ObservedObject var viewModel: ViewModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { geometry in
+            VStack(alignment: .center) {
+                Text(viewModel.registerWordData.englishSentence)
+                    .font(.custom("STBaoliTC-Regular", size: 20))
+                    .foregroundColor(.black)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                Text(viewModel.registerWordData.japaneseSentence)
+                    .font(.custom("STBaoliTC-Regular", size: 15))
+                    .foregroundColor(.gray)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                
+                ZStack {
+                    // 画像を表示する部分
+                    let data = Data(base64Encoded: viewModel.registerWordData.imageString)
+                    Image(uiImage: (UIImage(data: data ?? Data()) ?? UIImage(named: "NoImage")) ?? UIImage())
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 200)
+                    
+                    Circle()
+                        .fill(Color.designBackground)
+                        .frame(width: 100, height: 100)
+                        .offset(y: 50)
+                }
+                
+                Button {
+                    navigationPath.removeAll()
+                } label: {
+                    Text("ホームに戻る")
+                        .font(.custom("STBaoliTC-Regular", size: 15))
+                        .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.02)
+                }
+                .padding()
+                .buttonStyle(NegativeButton())
+            }
+        }
     }
 }
 
-#Preview {
-    RegisterCompleteView()
-}
