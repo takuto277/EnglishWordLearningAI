@@ -18,9 +18,13 @@
 		999F228D2BAC92BF007AE058 /* InputWordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999F228C2BAC92BF007AE058 /* InputWordViewModel.swift */; };
 		99A0BE592BCA55E00029AD20 /* RegisterCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0BE582BCA55E00029AD20 /* RegisterCompleteView.swift */; };
 		99A0BE5B2BCA61A70029AD20 /* RegisterCompleteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0BE5A2BCA61A70029AD20 /* RegisterCompleteViewModel.swift */; };
+		99A624072BCAE49D00755B4D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 99A624062BCAE49D00755B4D /* Realm */; };
+		99A624092BCAE49D00755B4D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 99A624082BCAE49D00755B4D /* RealmSwift */; };
 		99DF13562BCA7EAC00F474D8 /* WordListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DF13552BCA7EAC00F474D8 /* WordListViewModel.swift */; };
 		99DF13582BCA896600F474D8 /* WordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DF13572BCA896600F474D8 /* WordDetailView.swift */; };
 		99DF135A2BCA897D00F474D8 /* WordDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DF13592BCA897D00F474D8 /* WordDetailViewModel.swift */; };
+		99DF135C2BCA923400F474D8 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DF135B2BCA923400F474D8 /* DatabaseService.swift */; };
+		99DF13632BCAD33400F474D8 /* DatabaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DF13622BCAD33400F474D8 /* DatabaseRepository.swift */; };
 		ABB884CD2B76754B00B638C2 /* EnglishWordLearningAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB884CC2B76754B00B638C2 /* EnglishWordLearningAIApp.swift */; };
 		ABB884CF2B76754B00B638C2 /* WordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB884CE2B76754B00B638C2 /* WordListView.swift */; };
 		ABB884D12B76754B00B638C2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB884D02B76754B00B638C2 /* Item.swift */; };
@@ -62,6 +66,8 @@
 		99DF13552BCA7EAC00F474D8 /* WordListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListViewModel.swift; sourceTree = "<group>"; };
 		99DF13572BCA896600F474D8 /* WordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetailView.swift; sourceTree = "<group>"; };
 		99DF13592BCA897D00F474D8 /* WordDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetailViewModel.swift; sourceTree = "<group>"; };
+		99DF135B2BCA923400F474D8 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		99DF13622BCAD33400F474D8 /* DatabaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRepository.swift; sourceTree = "<group>"; };
 		ABB884C92B76754B00B638C2 /* EnglishWordLearningAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishWordLearningAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB884CC2B76754B00B638C2 /* EnglishWordLearningAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishWordLearningAIApp.swift; sourceTree = "<group>"; };
 		ABB884CE2B76754B00B638C2 /* WordListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListView.swift; sourceTree = "<group>"; };
@@ -80,6 +86,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99A624092BCAE49D00755B4D /* RealmSwift in Frameworks */,
+				99A624072BCAE49D00755B4D /* Realm in Frameworks */,
 				993F918C2BC1694200C15C6E /* SVProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				999F228A2BAC8A18007AE058 /* NewWordData.swift */,
+				99DF135B2BCA923400F474D8 /* DatabaseService.swift */,
+				99DF13622BCAD33400F474D8 /* DatabaseRepository.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,6 +223,8 @@
 			name = EnglishWordLearningAI;
 			packageProductDependencies = (
 				993F918B2BC1694200C15C6E /* SVProgressHUD */,
+				99A624062BCAE49D00755B4D /* Realm */,
+				99A624082BCAE49D00755B4D /* RealmSwift */,
 			);
 			productName = EnglishWordLearningAI;
 			productReference = ABB884C92B76754B00B638C2 /* EnglishWordLearningAI.app */;
@@ -288,6 +300,7 @@
 			mainGroup = ABB884C02B76754B00B638C2;
 			packageReferences = (
 				993F918A2BC1694200C15C6E /* XCRemoteSwiftPackageReference "SVProgressHUD" */,
+				99DF13642BCAE2D800F474D8 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = ABB884CA2B76754B00B638C2 /* Products */;
 			projectDirPath = "";
@@ -331,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99DF135C2BCA923400F474D8 /* DatabaseService.swift in Sources */,
 				ABB884CF2B76754B00B638C2 /* WordListView.swift in Sources */,
 				993F91892BC1433F00C15C6E /* SelectImageViewModel.swift in Sources */,
 				999F22862BAC74D3007AE058 /* SelectSentenceView.swift in Sources */,
@@ -342,6 +356,7 @@
 				999F228B2BAC8A18007AE058 /* NewWordData.swift in Sources */,
 				999F22842BAAA56C007AE058 /* DesignView.swift in Sources */,
 				ABB884D12B76754B00B638C2 /* Item.swift in Sources */,
+				99DF13632BCAD33400F474D8 /* DatabaseRepository.swift in Sources */,
 				993F91872BC13E7F00C15C6E /* SelectImageView.swift in Sources */,
 				99DF13582BCA896600F474D8 /* WordDetailView.swift in Sources */,
 				ABB884CD2B76754B00B638C2 /* EnglishWordLearningAIApp.swift in Sources */,
@@ -688,6 +703,14 @@
 				minimumVersion = 2.3.1;
 			};
 		};
+		99DF13642BCAE2D800F474D8 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.49.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -695,6 +718,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 993F918A2BC1694200C15C6E /* XCRemoteSwiftPackageReference "SVProgressHUD" */;
 			productName = SVProgressHUD;
+		};
+		99A624062BCAE49D00755B4D /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 99DF13642BCAE2D800F474D8 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		99A624082BCAE49D00755B4D /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 99DF13642BCAE2D800F474D8 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
