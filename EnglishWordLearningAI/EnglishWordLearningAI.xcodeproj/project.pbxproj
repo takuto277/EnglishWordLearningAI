@@ -19,6 +19,8 @@
 		99A0BE592BCA55E00029AD20 /* RegisterCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0BE582BCA55E00029AD20 /* RegisterCompleteView.swift */; };
 		99A0BE5B2BCA61A70029AD20 /* RegisterCompleteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0BE5A2BCA61A70029AD20 /* RegisterCompleteViewModel.swift */; };
 		99DF13562BCA7EAC00F474D8 /* WordListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DF13552BCA7EAC00F474D8 /* WordListViewModel.swift */; };
+		99DF13582BCA896600F474D8 /* WordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DF13572BCA896600F474D8 /* WordDetailView.swift */; };
+		99DF135A2BCA897D00F474D8 /* WordDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DF13592BCA897D00F474D8 /* WordDetailViewModel.swift */; };
 		ABB884CD2B76754B00B638C2 /* EnglishWordLearningAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB884CC2B76754B00B638C2 /* EnglishWordLearningAIApp.swift */; };
 		ABB884CF2B76754B00B638C2 /* WordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB884CE2B76754B00B638C2 /* WordListView.swift */; };
 		ABB884D12B76754B00B638C2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB884D02B76754B00B638C2 /* Item.swift */; };
@@ -58,6 +60,8 @@
 		99A0BE582BCA55E00029AD20 /* RegisterCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCompleteView.swift; sourceTree = "<group>"; };
 		99A0BE5A2BCA61A70029AD20 /* RegisterCompleteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCompleteViewModel.swift; sourceTree = "<group>"; };
 		99DF13552BCA7EAC00F474D8 /* WordListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListViewModel.swift; sourceTree = "<group>"; };
+		99DF13572BCA896600F474D8 /* WordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetailView.swift; sourceTree = "<group>"; };
+		99DF13592BCA897D00F474D8 /* WordDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetailViewModel.swift; sourceTree = "<group>"; };
 		ABB884C92B76754B00B638C2 /* EnglishWordLearningAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishWordLearningAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB884CC2B76754B00B638C2 /* EnglishWordLearningAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishWordLearningAIApp.swift; sourceTree = "<group>"; };
 		ABB884CE2B76754B00B638C2 /* WordListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListView.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 				999F22852BAC74D3007AE058 /* SelectSentenceView.swift */,
 				993F91862BC13E7F00C15C6E /* SelectImageView.swift */,
 				99A0BE582BCA55E00029AD20 /* RegisterCompleteView.swift */,
+				99DF13572BCA896600F474D8 /* WordDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 				999F22872BAC894A007AE058 /* SelectSentenceViewModel.swift */,
 				993F91882BC1433F00C15C6E /* SelectImageViewModel.swift */,
 				99A0BE5A2BCA61A70029AD20 /* RegisterCompleteViewModel.swift */,
+				99DF13592BCA897D00F474D8 /* WordDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -337,8 +343,10 @@
 				999F22842BAAA56C007AE058 /* DesignView.swift in Sources */,
 				ABB884D12B76754B00B638C2 /* Item.swift in Sources */,
 				993F91872BC13E7F00C15C6E /* SelectImageView.swift in Sources */,
+				99DF13582BCA896600F474D8 /* WordDetailView.swift in Sources */,
 				ABB884CD2B76754B00B638C2 /* EnglishWordLearningAIApp.swift in Sources */,
 				99A0BE5B2BCA61A70029AD20 /* RegisterCompleteViewModel.swift in Sources */,
+				99DF135A2BCA897D00F474D8 /* WordDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
