@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SVProgressHUD
 
 struct SelectSentenceView<ViewModel: SelectSentenceViewModel>: View {
     @Binding var navigationPath: [NavigationPath]
@@ -14,17 +15,8 @@ struct SelectSentenceView<ViewModel: SelectSentenceViewModel>: View {
 
     var body: some View {
         GeometryReader { geometry in
-            // 背景デザイン
-            ZStack(alignment: .center) {
-                TopDesign(title: "文章選択", height: 250, yOffset: -120)
-                
-                BottomDesign(height: 150, yOffset: geometry.size.height)
-            }
-            .edgesIgnoringSafeArea(.all)
-            
             // 単語名履歴
             VStack {
-                Spacer().frame(height: 100)
                 Text("単語名:\(viewModel.newWordData.englishWord), \(viewModel.newWordData.japansesWord)")
                     .padding()
                     .multilineTextAlignment(.leading)
@@ -34,7 +26,7 @@ struct SelectSentenceView<ViewModel: SelectSentenceViewModel>: View {
                 
                 // 文章リスト
                 List {
-                    ForEach(Array(viewModel.newWordData.response.enumerated()), id: \.1) { index, element in
+                    ForEach(Array(viewModel.newWordData.response.enumerated()), id: \.0) { index, element in
                         Button {
                             viewModel.setSentenceNumber(number: index)
                         } label: {
@@ -47,7 +39,7 @@ struct SelectSentenceView<ViewModel: SelectSentenceViewModel>: View {
                                 .foregroundColor(.gray)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
-                        .background(viewModel.getSelectedSentenceNumber() == index ? Color.positivePush : Color.clear)
+                        .listRowBackground(viewModel.selectedSentenceNumber == index ? Color.positivePush : Color.clear)
                     }
                 }
                 
@@ -66,6 +58,11 @@ struct SelectSentenceView<ViewModel: SelectSentenceViewModel>: View {
                     Button {
                         // TODO: 選択した文章を用いてイメージ画像作成呼び出し
                         // TODO: その後に遷移: navigationPath.append(.pathSelectImage)
+                        SVProgressHUD.show()
+                        viewModel.getNewImageData { newImageData in
+                            SVProgressHUD.dismiss()
+                            navigationPath.append(.pathSelectImage(newImageData))
+                        }
                     } label: {
                         Text("決定")
                             .font(.custom("STBaoliTC-Regular", size: 15))

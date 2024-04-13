@@ -12,72 +12,96 @@ enum NavigationPath: Hashable {
     case pathWordList
     case pathInputWord
     case pathSelectSentence(NewWordData)
-    case pathSelectImage
+    case pathSelectImage(NewImageData)
 }
 
 struct ContentView: View {
     @State private var navigationPath: [NavigationPath] = []
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
-
+    
     var body: some View {
-        NavigationStack(path: $navigationPath) {
-            GeometryReader { geometry in
-                VStack {
-                    List {
-                        ForEach(items) { item in
-                            NavigationLink {
-                                Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                            } label: {
-                                Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+        GeometryReader { geometry in
+            VStack(alignment: .center) {
+                TopDesign(title: getTitle(for: navigationPath), height: 150, width: geometry.size.width)
+                
+                NavigationStack(path: $navigationPath) {
+                    VStack {
+                        List {
+                            ForEach(items) { item in
+                                NavigationLink {
+                                    Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                                } label: {
+                                    Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                                }
+                            }
+                            .onDelete(perform: deleteItems)
+                        }
+                        .toolbar {
+                            ToolbarItem(placement: .navigationBarTrailing) {
+                                EditButton()
+                            }
+                            ToolbarItem {
+                                Button(action: addItem) {
+                                    Label("Add Item", systemImage: "plus")
+                                }
                             }
                         }
-                        .onDelete(perform: deleteItems)
-                    }
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            EditButton()
+                        Spacer()
+                        Button {
+                            navigationPath.append(.pathInputWord)
+                        } label: {
+                            Text("英文作成画面へ")
+                                .padding()
+                            
                         }
-                        ToolbarItem {
-                            Button(action: addItem) {
-                                Label("Add Item", systemImage: "plus")
-                            }
+                        .padding()
+                        .frame(width: geometry.size.width * 0.5, height: geometry.size.height * 0.05, alignment: .center)
+                        .background(Color.mint)
+                        .cornerRadius(10)
+                        Spacer()
+                    }
+                    .navigationDestination(for: NavigationPath.self) { value in
+                        switch value {
+                        case .pathWordList:
+                            ContentView()
+                        case .pathInputWord:
+                            InputWordView(navigationPath: $navigationPath, viewModel: InputWordViewModel())
+                                .navigationBarBackButtonHidden(true)
+                                .frame(width: geometry.size.width, height: geometry.size.height * 0.5)
+                        case .pathSelectSentence(let newWordData):
+                            SelectSentenceView(navigationPath: $navigationPath, viewModel: SelectSentenceViewModel(newWordData: newWordData))
+                                .navigationBarBackButtonHidden(true)
+                        case .pathSelectImage(let newImageData):
+                            SelectImageView(navigationPath: $navigationPath, viewModel: SelectImageViewModel(newImageData: newImageData))
+                                .navigationBarBackButtonHidden(true)
                         }
                     }
-                    Spacer()
-                    Button {
-                        navigationPath.append(.pathInputWord)
-                    } label: {
-                        Text("英文作成画面へ")
-                            .padding()
-
-                    }
-                    .padding()
-                    .frame(width: geometry.size.width * 0.5, height: geometry.size.height * 0.05, alignment: .center)
-                    .background(Color.mint)
-                    .cornerRadius(10)
-                    Spacer()
                 }
+                
+                BottomDesign(height: 70, width: geometry.size.width)
             }
-            .navigationDestination(for: NavigationPath.self) { value in
-                switch value {
-                case .pathWordList:
-                    ContentView()
-                case .pathInputWord:
-                    InputWordView(navigationPath: $navigationPath, viewModel: InputWordViewModel())
-                        .navigationBarBackButtonHidden(true)
-                case .pathSelectSentence(let newWordData):
-                    SelectSentenceView(navigationPath: $navigationPath, viewModel: SelectSentenceViewModel(newWordData: newWordData))
-                        .navigationBarBackButtonHidden(true)
-                case .pathSelectImage:
-                    //TODO: イメージ画像選択に遷移
-                    ContentView()
-                        .navigationBarBackButtonHidden(true)
-                }
-            }
+            .edgesIgnoringSafeArea(.all)
         }
     }
-
+    
+    func getTitle(for navigationPath: [NavigationPath]) -> String {
+            guard let lastPath = navigationPath.last else {
+                return "単語一覧"
+            }
+            
+            switch lastPath {
+            case .pathWordList:
+                return "単語一覧"
+            case .pathInputWord:
+                return "英文作成"
+            case .pathSelectSentence:
+                return "文章選択"
+            case .pathSelectImage:
+                return "イメージ画像選択"
+            }
+        }
+    
     private func addItem() {
         withAnimation {
             let newItem = Item(timestamp: Date())
