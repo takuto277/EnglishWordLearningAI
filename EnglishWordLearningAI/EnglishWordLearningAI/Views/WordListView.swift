@@ -14,6 +14,7 @@ enum NavigationPath: Hashable {
     case pathSelectSentence(NewWordData)
     case pathSelectImage(NewImageData)
     case pathRegisterComplete(RegisterWordData)
+    case pathWordDetail(RegisterWordData)
 }
 
 struct WordListView<ViewModel: WordListViewModel>: View {
@@ -32,10 +33,11 @@ struct WordListView<ViewModel: WordListViewModel>: View {
                         VStack {
                             List {
                                 ForEach(Array(viewModel.registerWordData?.enumerated() ?? [].enumerated()), id: \.0) { index, element in
-                                    WordListCell(registerWordData: element)
-                                        .onTapGesture {
-                                            
-                                        }
+                                    Button(action: {
+                                        navigationPath.append(.pathWordDetail(element))
+                                    }) {
+                                        WordListCell(registerWordData: element)
+                                    }
                                 }
                                 .onDelete { indexSet in
                                     indexSet.forEach { index in
@@ -68,6 +70,10 @@ struct WordListView<ViewModel: WordListViewModel>: View {
                             case .pathRegisterComplete(let registerWordData):
                                 RegisterCompleteView(navigationPath: $navigationPath,
                                                      viewModel: RegisterCompleteViewModel(registerWordData: registerWordData))
+                                .navigationBarBackButtonHidden(true)
+                            case .pathWordDetail(let registerWordData):
+                                WordDetailView(navigationPath: $navigationPath,
+                                                     viewModel: WordDetailViewModel(registerWordData: registerWordData))
                                 .navigationBarBackButtonHidden(true)
                             }
                         }
@@ -116,6 +122,8 @@ struct WordListView<ViewModel: WordListViewModel>: View {
             return "イメージ画像選択"
         case .pathRegisterComplete:
             return "登録完了"
+        case .pathWordDetail:
+            return "単語詳細"
         }
     }
     
