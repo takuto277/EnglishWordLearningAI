@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+final class RegisterCompleteViewModel: ObservableObject {
+    @Published var registerWordData: RegisterWordData
+    
+    init(registerWordData: RegisterWordData) {
+        self.registerWordData = registerWordData
+        
+    }
+}

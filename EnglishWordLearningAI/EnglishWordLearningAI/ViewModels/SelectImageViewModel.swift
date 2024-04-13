@@ -23,5 +23,19 @@ final class SelectImageViewModel: ObservableObject {
     func getSelectedImageNumber() -> Int? {
         return selectedImageNumber
     }
+    
+    func register(completion: @escaping (RegisterWordData) -> Void) {
+        
+        guard let selectedImageNumber = selectedImageNumber else {
+            return
+        }
+        
+        let registerWordData = RegisterWordData(englishWord: newImageData.englishWord,
+                                                japansesWord: newImageData.japansesWord,
+                                                englishSentence: newImageData.englishSentence,
+                                                japaneseSentence: newImageData.japaneseSentence,
+                                                imageString: newImageData.imageResponse[selectedImageNumber])
+        completion(registerWordData)
+    }
     //TODO: 保存処理(Realm)
 }

@@ -13,6 +13,7 @@ enum NavigationPath: Hashable {
     case pathInputWord
     case pathSelectSentence(NewWordData)
     case pathSelectImage(NewImageData)
+    case pathRegisterComplete(RegisterWordData)
 }
 
 struct ContentView: View {
@@ -66,15 +67,22 @@ struct ContentView: View {
                         case .pathWordList:
                             ContentView()
                         case .pathInputWord:
-                            InputWordView(navigationPath: $navigationPath, viewModel: InputWordViewModel())
-                                .navigationBarBackButtonHidden(true)
-                                .frame(width: geometry.size.width, height: geometry.size.height * 0.5)
+                            InputWordView(navigationPath: $navigationPath,
+                                          viewModel: InputWordViewModel())
+                            .navigationBarBackButtonHidden(true)
+                            .frame(width: geometry.size.width, height: geometry.size.height * 0.5)
                         case .pathSelectSentence(let newWordData):
-                            SelectSentenceView(navigationPath: $navigationPath, viewModel: SelectSentenceViewModel(newWordData: newWordData))
-                                .navigationBarBackButtonHidden(true)
+                            SelectSentenceView(navigationPath: $navigationPath,
+                                               viewModel: SelectSentenceViewModel(newWordData: newWordData))
+                            .navigationBarBackButtonHidden(true)
                         case .pathSelectImage(let newImageData):
-                            SelectImageView(navigationPath: $navigationPath, viewModel: SelectImageViewModel(newImageData: newImageData))
-                                .navigationBarBackButtonHidden(true)
+                            SelectImageView(navigationPath: $navigationPath,
+                                            viewModel: SelectImageViewModel(newImageData: newImageData))
+                            .navigationBarBackButtonHidden(true)
+                        case .pathRegisterComplete(let registerWordData):
+                            RegisterCompleteView(navigationPath: $navigationPath,
+                                                 viewModel: RegisterCompleteViewModel(registerWordData: registerWordData))
+                            .navigationBarBackButtonHidden(true)
                         }
                     }
                 }
@@ -99,6 +107,8 @@ struct ContentView: View {
                 return "文章選択"
             case .pathSelectImage:
                 return "イメージ画像選択"
+            case .pathRegisterComplete:
+                return "登録完了"
             }
         }
     
