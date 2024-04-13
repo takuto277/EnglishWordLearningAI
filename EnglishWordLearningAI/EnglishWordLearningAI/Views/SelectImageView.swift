@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SVProgressHUD
 
 struct SelectImageView<ViewModel: SelectImageViewModel>: View {
     @Binding var navigationPath: [NavigationPath]
@@ -55,7 +56,12 @@ struct SelectImageView<ViewModel: SelectImageViewModel>: View {
                     
                     Button {
                         // TODO: 選択した画像を用いて保存処理
-                        // TODO: その後に遷移: navigationPath.append(.pathSelectImage)
+                        // TODO: その後に遷移: 
+                        SVProgressHUD.show()
+                        viewModel.register { registerWordData  in
+                            SVProgressHUD.dismiss()
+                            navigationPath.append(.pathRegisterComplete(registerWordData))
+                        }
                     } label: {
                         Text("決定")
                             .font(.custom("STBaoliTC-Regular", size: 15))

@@ -25,7 +25,7 @@ struct EnglishWordLearningAIApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WordListView(viewModel: WordListViewModel())
         }
         .modelContainer(sharedModelContainer)
     }
