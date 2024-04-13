@@ -32,7 +32,7 @@ struct WordListView<ViewModel: WordListViewModel>: View {
                     NavigationStack(path: $navigationPath) {
                         VStack {
                             List {
-                                ForEach(Array(viewModel.registerWordData?.enumerated() ?? [].enumerated()), id: \.0) { index, element in
+                                ForEach(Array(viewModel.registerWordData.enumerated()), id: \.0) { index, element in
                                     Button(action: {
                                         navigationPath.append(.pathWordDetail(element))
                                     }) {
@@ -79,6 +79,7 @@ struct WordListView<ViewModel: WordListViewModel>: View {
                         }
                         .onAppear {
                             self.isplusButtonVisible = true
+                            viewModel.updateListData()
                         }
                         .onDisappear {
                             self.isplusButtonVisible = false

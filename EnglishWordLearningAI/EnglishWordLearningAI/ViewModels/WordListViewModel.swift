@@ -11,21 +11,24 @@ import Foundation
 import SwiftUI
 
 final class WordListViewModel: ObservableObject {
-    @Published var registerWordData: [RegisterWordData]?
+    @Published var registerWordData: [RegisterWordData] = []
+    private var repository: DatabaseRepositoryProtocol?
     
     init() {
-        self.registerWordData = []
-        for _ in 0..<20 {
-            let test = RegisterWordData(englishWord: "apple",
-                                                     japansesWord: "りんご",
-                                                     englishSentence: "apple pen",
-                                                     japaneseSentence: "りんごペン",
-                                                     imageString: "hoge")
-            registerWordData?.append(test)
-        }
+        self.repository = DatabaseRepository()
+        self.updateListData()
     }
     
     func deleteWord(index: Int) {
         
+    }
+    
+    func updateListData() {
+        // 初期化
+        self.registerWordData = []
+        // 更新処理
+        self.repository?.fetchAllWords().forEach({ element in
+            self.registerWordData.append(element)
+        })
     }
 }
