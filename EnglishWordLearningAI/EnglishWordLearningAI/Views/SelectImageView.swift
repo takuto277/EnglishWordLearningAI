@@ -73,6 +73,8 @@ struct SelectImageView<ViewModel: SelectImageViewModel>: View {
                     }
                     .padding()
                     .buttonStyle(PositiveButton())
+                    .disabled(!viewModel.isButtonAvailable)
+                    .opacity(viewModel.isButtonAvailable ? 1.0 : 0.5)
                 }
             }
             .padding()

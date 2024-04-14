@@ -10,6 +10,7 @@ import Foundation
 final class SelectImageViewModel: ObservableObject {
     @Published var newImageData: NewImageData
     @Published var selectedImageNumber: Int?
+    @Published var isButtonAvailable: Bool = false
     private var repository: DatabaseRepositoryProtocol?
     
     init(newImageData: NewImageData) {
@@ -24,6 +25,7 @@ final class SelectImageViewModel: ObservableObject {
     
     func setImageNumber(number: Int) {
         self.selectedImageNumber = number
+        self.isButtonAvailable = true
     }
     
     func getSelectedImageNumber() -> Int? {

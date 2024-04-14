@@ -27,7 +27,6 @@
 		99DF13632BCAD33400F474D8 /* DatabaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DF13622BCAD33400F474D8 /* DatabaseRepository.swift */; };
 		ABB884CD2B76754B00B638C2 /* EnglishWordLearningAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB884CC2B76754B00B638C2 /* EnglishWordLearningAIApp.swift */; };
 		ABB884CF2B76754B00B638C2 /* WordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB884CE2B76754B00B638C2 /* WordListView.swift */; };
-		ABB884D12B76754B00B638C2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB884D02B76754B00B638C2 /* Item.swift */; };
 		ABB884D32B76754D00B638C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB884D22B76754D00B638C2 /* Assets.xcassets */; };
 		ABB884D62B76754D00B638C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB884D52B76754D00B638C2 /* Preview Assets.xcassets */; };
 		ABB884E02B76754E00B638C2 /* EnglishWordLearningAITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB884DF2B76754E00B638C2 /* EnglishWordLearningAITests.swift */; };
@@ -71,7 +70,6 @@
 		ABB884C92B76754B00B638C2 /* EnglishWordLearningAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishWordLearningAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB884CC2B76754B00B638C2 /* EnglishWordLearningAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishWordLearningAIApp.swift; sourceTree = "<group>"; };
 		ABB884CE2B76754B00B638C2 /* WordListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListView.swift; sourceTree = "<group>"; };
-		ABB884D02B76754B00B638C2 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		ABB884D22B76754D00B638C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABB884D52B76754D00B638C2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ABB884DB2B76754E00B638C2 /* EnglishWordLearningAITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnglishWordLearningAITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,7 +171,6 @@
 				999F22802BAA98F9007AE058 /* ViewModels */,
 				999F227F2BAA98E6007AE058 /* Views */,
 				ABB884CC2B76754B00B638C2 /* EnglishWordLearningAIApp.swift */,
-				ABB884D02B76754B00B638C2 /* Item.swift */,
 				ABB884D22B76754D00B638C2 /* Assets.xcassets */,
 				ABB884D42B76754D00B638C2 /* Preview Content */,
 			);
@@ -355,7 +352,6 @@
 				99A0BE592BCA55E00029AD20 /* RegisterCompleteView.swift in Sources */,
 				999F228B2BAC8A18007AE058 /* NewWordData.swift in Sources */,
 				999F22842BAAA56C007AE058 /* DesignView.swift in Sources */,
-				ABB884D12B76754B00B638C2 /* Item.swift in Sources */,
 				99DF13632BCAD33400F474D8 /* DatabaseRepository.swift in Sources */,
 				993F91872BC13E7F00C15C6E /* SelectImageView.swift in Sources */,
 				99DF13582BCA896600F474D8 /* WordDetailView.swift in Sources */,
