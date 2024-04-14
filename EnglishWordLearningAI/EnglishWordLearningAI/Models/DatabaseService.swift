@@ -56,16 +56,19 @@ class RegisterWordDataObject: Object {
     
     // データの削除
     func deleteWord(registerWordData: RegisterWordData) -> Bool {
-        let registerWordDataObject = registerWordData.toRealmObject()
-        do {
-            try realmObject?.write {
-                realmObject?.delete(registerWordDataObject)
+        if let registerWordDataObjects = realmObject?.objects(RegisterWordDataObject.self),
+           let registerWordDataObject = registerWordDataObjects.first(where: { $0.wordNumber == registerWordData.wordNumber }) {
+            do {
+                try realmObject?.write {
+                    realmObject?.delete(registerWordDataObject)
+                }
+                return true
+            } catch {
+                print("Error deleting word to Realm: \(error.localizedDescription)")
+                return false
             }
-            return true
-        } catch {
-            print("Error adding word to Realm: \(error.localizedDescription)")
-            return false
         }
+        return false
     }
     
     // データの取得

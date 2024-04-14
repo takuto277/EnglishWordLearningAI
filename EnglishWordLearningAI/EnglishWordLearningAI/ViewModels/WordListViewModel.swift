@@ -20,7 +20,12 @@ final class WordListViewModel: ObservableObject {
     }
     
     func deleteWord(index: Int) {
-        
+        guard let repository = repository else {
+            return
+        }
+        if repository.deleteWord(registerWordData: registerWordData[index]) {
+            self.updateListData()
+        }
     }
     
     func updateListData() {
