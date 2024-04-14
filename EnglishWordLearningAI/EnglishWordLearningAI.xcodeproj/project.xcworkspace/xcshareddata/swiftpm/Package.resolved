@@ -1,4 +1,5 @@
 {
+  "originHash" : "74d35d46c5edad22a521af62ee528d60eeb9a4b940da9031e893e805b95af978",
   "pins" : [
     {
       "identity" : "svprogresshud",
@@ -10,5 +11,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
