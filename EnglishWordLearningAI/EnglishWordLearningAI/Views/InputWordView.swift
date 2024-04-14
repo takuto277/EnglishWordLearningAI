@@ -41,7 +41,7 @@ struct InputWordView<ViewModel: InputWordViewModel>: View {
                     .buttonStyle(NegativeButton())
                     
                     Button {
-                        navigationPath.append(.pathSelectSentence(viewModel.getNewWordData()))
+                        navigationPath.append(.pathSelectSentence(viewModel.getNewWordData(text: self.text)))
                     } label: {
                         Text("英文作成")
                             .font(.custom("STBaoliTC-Regular", size: 15))
@@ -49,6 +49,8 @@ struct InputWordView<ViewModel: InputWordViewModel>: View {
                     }
                     .padding()
                     .buttonStyle(PositiveButton())
+                    .disabled(self.text.isEmpty)
+                    .opacity(self.text.isEmpty ? 0.5 : 1.0)
                 }
             }
             .padding()
@@ -57,7 +59,7 @@ struct InputWordView<ViewModel: InputWordViewModel>: View {
     }
     
     var placeholderText: some View {
-        Text("例: apple")
+        Text("例: りんご")
             .foregroundColor(Color(uiColor: .placeholderText))
             .padding(.vertical, 8)
             .allowsHitTesting(false)

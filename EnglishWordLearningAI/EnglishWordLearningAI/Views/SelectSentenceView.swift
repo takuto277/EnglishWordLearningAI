@@ -12,6 +12,7 @@ struct SelectSentenceView<ViewModel: SelectSentenceViewModel>: View {
     @Binding var navigationPath: [NavigationPath]
     @ObservedObject var viewModel: ViewModel
     @Environment(\.dismiss) var dismiss
+    @State private var showAlert = false
 
     var body: some View {
         GeometryReader { geometry in
@@ -61,7 +62,11 @@ struct SelectSentenceView<ViewModel: SelectSentenceViewModel>: View {
                         SVProgressHUD.show()
                         viewModel.getNewImageData { newImageData in
                             SVProgressHUD.dismiss()
-                            navigationPath.append(.pathSelectImage(newImageData))
+                            if let newImageData = newImageData {
+                                navigationPath.append(.pathSelectImage(newImageData))
+                            } else {
+                                showAlert = true
+                            }
                         }
                     } label: {
                         Text("決定")
@@ -70,11 +75,19 @@ struct SelectSentenceView<ViewModel: SelectSentenceViewModel>: View {
                     }
                     .padding()
                     .buttonStyle(PositiveButton())
+                    .disabled(!viewModel.isButtonAvailable)
+                    .opacity(viewModel.isButtonAvailable ? 1.0 : 0.5)
                 }
                 Spacer().frame(height: 50)
             }
             .padding()
-            .frame(width: geometry.size.width)
+            .alert(isPresented: $showAlert) {
+                Alert(
+                    title: Text("注意"),
+                    message: Text("画像取得に失敗しました。\nやり直してください。"),
+                    dismissButton: .default(Text("OK"))
+                )
+            }
         }
     }
 }
