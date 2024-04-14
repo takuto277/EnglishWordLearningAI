@@ -12,6 +12,8 @@ struct SelectImageView<ViewModel: SelectImageViewModel>: View {
     @Binding var navigationPath: [NavigationPath]
     @ObservedObject var viewModel: ViewModel
     @Environment(\.dismiss) var dismiss
+    @State private var showAlert = false
+    
     var body: some View {
         GeometryReader { geometry in
             VStack(alignment: .center) {
@@ -55,12 +57,14 @@ struct SelectImageView<ViewModel: SelectImageViewModel>: View {
                     .buttonStyle(NegativeButton())
                     
                     Button {
-                        // TODO: 選択した画像を用いて保存処理
-                        // TODO: その後に遷移: 
                         SVProgressHUD.show()
                         viewModel.register { registerWordData  in
                             SVProgressHUD.dismiss()
-                            navigationPath.append(.pathRegisterComplete(registerWordData))
+                            if let registerWordData = registerWordData {
+                                navigationPath.append(.pathRegisterComplete(registerWordData))
+                            } else {
+                                showAlert = true
+                            }
                         }
                     } label: {
                         Text("決定")
@@ -69,10 +73,18 @@ struct SelectImageView<ViewModel: SelectImageViewModel>: View {
                     }
                     .padding()
                     .buttonStyle(PositiveButton())
+                    .disabled(!viewModel.isButtonAvailable)
+                    .opacity(viewModel.isButtonAvailable ? 1.0 : 0.5)
                 }
             }
             .padding()
-            .frame(width: geometry.size.width)
+            .alert(isPresented: $showAlert) {
+                Alert(
+                    title: Text("注意"),
+                    message: Text("保存に失敗しました。\nやり直してください。"),
+                    dismissButton: .default(Text("OK"))
+                )
+            }
         }
     }
 }
