@@ -7,10 +7,15 @@
 
 import Foundation
 
-struct CreateImageResponse: Codable, Hashable {
-    var presignedUrl: String
-    
+struct CreateImageResponse: Codable {
+    let statusCode: Int
+    let body: Body
+}
+
+struct Body: Codable {
+    let presignedURL: String
+
     enum CodingKeys: String, CodingKey {
-        case presignedUrl = "presigned_url"
+        case presignedURL = "presigned_url"
     }
 }

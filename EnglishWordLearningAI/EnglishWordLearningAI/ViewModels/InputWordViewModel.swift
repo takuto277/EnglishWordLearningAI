@@ -14,16 +14,6 @@ final class InputWordViewModel: ObservableObject {
     //TODO: 文章選択画面へ渡す値の詰め込み処理
     func getNewWordData(text: String) -> NewWordData {
         //TODO: 保持した値を詰め込んで返す
-        return NewWordData(englishWord: englishWord, japansesWord: text, response: [SentenceResponse(englishSentence: "this is a apple.", japaneseSentence: "これはりんごです。"),
-                                                                                            SentenceResponse(englishSentence: "this is a apple.", japaneseSentence: "これはりんごです。"),
-                                                                                            SentenceResponse(englishSentence: "this is a apple.", japaneseSentence: "これはりんごです。"),
-                                                                                            SentenceResponse(englishSentence: "this is a apple.", japaneseSentence: "これはりんごです。"),
-                                                                                            SentenceResponse(englishSentence: "this is a apple.", japaneseSentence: "これはりんごです。"),
-                                                                                            SentenceResponse(englishSentence: "this is a apple.", japaneseSentence: "これはりんごです。"),
-                                                                                            SentenceResponse(englishSentence: "this is a apple.", japaneseSentence: "これはりんごです。"),
-                                                                                            SentenceResponse(englishSentence: "this is a apple.", japaneseSentence: "これはりんごです。"),
-                                                                                            SentenceResponse(englishSentence: "this is a apple.", japaneseSentence: "これはりんごです。"),
-                                                                                            SentenceResponse(englishSentence: "this is a apple.", japaneseSentence: "これはりんごです。"),
-                                                                                            SentenceResponse(englishSentence: "this is a apple.", japaneseSentence: "これはりんごです。")])
+        return NewWordData(englishWord: text, japansesWord: "日本語固定値", response: [SentenceResponse(englishSentence: text, japaneseSentence: "日本語文固定値")])
     }
 }

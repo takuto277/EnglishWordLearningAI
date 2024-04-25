@@ -8,18 +8,20 @@
 import Foundation
 
 class APIProtocol {
-    
-    
     /// 生成AI画像を取得
     /// - Parameter parameter: CreateImageRequest
     /// - Returns: Result<CreateImageResponse, Error>
     func getAIImage(parameter: CreateImageRequest) async throws -> Result<CreateImageResponse, Error> {
         guard let url = URL(string: Const.API_BASE_URL) else { throw APIError.unexpected }
-        guard let data = try? JSONEncoder().encode(parameter) else { throw APIError.failedEncode }
+        let parameters: [String: String] = ["input_text": parameter.inputText]
+        guard let postData = try? JSONSerialization.data(withJSONObject: parameters) else {
+            throw APIError.failedEncode
+        }
         
         var request = URLRequest(url: url)
+        request.httpMethod = "POST"
         request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
-        request.httpBody = data
+        request.httpBody = postData
         do {
             let (data, response) = try await URLSession.shared.data(for: request)
             guard let httpResponse = response as? HTTPURLResponse else {
