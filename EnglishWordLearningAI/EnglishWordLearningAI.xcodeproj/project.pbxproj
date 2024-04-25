@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6675F0ADC5682805244CE9A9 /* libPods-EnglishWordLearningAI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB21705A6188C954E70E1CCE /* libPods-EnglishWordLearningAI.a */; };
 		993F91872BC13E7F00C15C6E /* SelectImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F91862BC13E7F00C15C6E /* SelectImageView.swift */; };
 		993F91892BC1433F00C15C6E /* SelectImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F91882BC1433F00C15C6E /* SelectImageViewModel.swift */; };
 		993F918C2BC1694200C15C6E /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 993F918B2BC1694200C15C6E /* SVProgressHUD */; };
@@ -41,6 +42,8 @@
 		ABB884E02B76754E00B638C2 /* EnglishWordLearningAITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB884DF2B76754E00B638C2 /* EnglishWordLearningAITests.swift */; };
 		ABB884EA2B76754E00B638C2 /* EnglishWordLearningAIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB884E92B76754E00B638C2 /* EnglishWordLearningAIUITests.swift */; };
 		ABB884EC2B76754E00B638C2 /* EnglishWordLearningAIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB884EB2B76754E00B638C2 /* EnglishWordLearningAIUITestsLaunchTests.swift */; };
+		DE71D36E5D55790FBADF2575 /* libPods-EnglishWordLearningAI-EnglishWordLearningAIUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37AFEF3C574A737D111E80DE /* libPods-EnglishWordLearningAI-EnglishWordLearningAIUITests.a */; };
+		FCB1BE580BFC32A2B79D7806 /* libPods-EnglishWordLearningAITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 058729F3751A3DFA0E12B0F6 /* libPods-EnglishWordLearningAITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		058729F3751A3DFA0E12B0F6 /* libPods-EnglishWordLearningAITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EnglishWordLearningAITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		090B9C43F98BD5BF616373F8 /* Pods-EnglishWordLearningAI-EnglishWordLearningAIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishWordLearningAI-EnglishWordLearningAIUITests.debug.xcconfig"; path = "Target Support Files/Pods-EnglishWordLearningAI-EnglishWordLearningAIUITests/Pods-EnglishWordLearningAI-EnglishWordLearningAIUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		26B17D7735D30738E2F22FEB /* Pods-EnglishWordLearningAI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishWordLearningAI.debug.xcconfig"; path = "Target Support Files/Pods-EnglishWordLearningAI/Pods-EnglishWordLearningAI.debug.xcconfig"; sourceTree = "<group>"; };
+		37AFEF3C574A737D111E80DE /* libPods-EnglishWordLearningAI-EnglishWordLearningAIUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EnglishWordLearningAI-EnglishWordLearningAIUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65A7220C86D7AAEF5E4257F2 /* Pods-EnglishWordLearningAITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishWordLearningAITests.release.xcconfig"; path = "Target Support Files/Pods-EnglishWordLearningAITests/Pods-EnglishWordLearningAITests.release.xcconfig"; sourceTree = "<group>"; };
+		86176994FD75950BCF32F212 /* Pods-EnglishWordLearningAITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishWordLearningAITests.debug.xcconfig"; path = "Target Support Files/Pods-EnglishWordLearningAITests/Pods-EnglishWordLearningAITests.debug.xcconfig"; sourceTree = "<group>"; };
 		993F91862BC13E7F00C15C6E /* SelectImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageView.swift; sourceTree = "<group>"; };
 		993F91882BC1433F00C15C6E /* SelectImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageViewModel.swift; sourceTree = "<group>"; };
 		999F22812BAA9CBB007AE058 /* InputWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputWordView.swift; sourceTree = "<group>"; };
@@ -76,6 +85,7 @@
 		99DF13592BCA897D00F474D8 /* WordDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetailViewModel.swift; sourceTree = "<group>"; };
 		99DF135B2BCA923400F474D8 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		99DF13622BCAD33400F474D8 /* DatabaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRepository.swift; sourceTree = "<group>"; };
+		AB21705A6188C954E70E1CCE /* libPods-EnglishWordLearningAI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EnglishWordLearningAI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABA556792BCA743E00DFED01 /* CreateImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateImageRequest.swift; sourceTree = "<group>"; };
 		ABA5567B2BCA745000DFED01 /* CreateImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateImageResponse.swift; sourceTree = "<group>"; };
 		ABA5567D2BCA748E00DFED01 /* AwsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwsRepository.swift; sourceTree = "<group>"; };
@@ -95,6 +105,8 @@
 		ABB884E52B76754E00B638C2 /* EnglishWordLearningAIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnglishWordLearningAIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB884E92B76754E00B638C2 /* EnglishWordLearningAIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishWordLearningAIUITests.swift; sourceTree = "<group>"; };
 		ABB884EB2B76754E00B638C2 /* EnglishWordLearningAIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishWordLearningAIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BA9CFAEEA1C998DB5C56A815 /* Pods-EnglishWordLearningAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishWordLearningAI.release.xcconfig"; path = "Target Support Files/Pods-EnglishWordLearningAI/Pods-EnglishWordLearningAI.release.xcconfig"; sourceTree = "<group>"; };
+		CB2F36F562DC0FCF278DC7C9 /* Pods-EnglishWordLearningAI-EnglishWordLearningAIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishWordLearningAI-EnglishWordLearningAIUITests.release.xcconfig"; path = "Target Support Files/Pods-EnglishWordLearningAI-EnglishWordLearningAIUITests/Pods-EnglishWordLearningAI-EnglishWordLearningAIUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +117,7 @@
 				99A624092BCAE49D00755B4D /* RealmSwift in Frameworks */,
 				99A624072BCAE49D00755B4D /* Realm in Frameworks */,
 				993F918C2BC1694200C15C6E /* SVProgressHUD in Frameworks */,
+				6675F0ADC5682805244CE9A9 /* libPods-EnglishWordLearningAI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB1BE580BFC32A2B79D7806 /* libPods-EnglishWordLearningAITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,12 +133,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE71D36E5D55790FBADF2575 /* libPods-EnglishWordLearningAI-EnglishWordLearningAIUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BAD1E2F660F071898AD35EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB21705A6188C954E70E1CCE /* libPods-EnglishWordLearningAI.a */,
+				37AFEF3C574A737D111E80DE /* libPods-EnglishWordLearningAI-EnglishWordLearningAIUITests.a */,
+				058729F3751A3DFA0E12B0F6 /* libPods-EnglishWordLearningAITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		999F227F2BAA98E6007AE058 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +249,8 @@
 				ABB884DE2B76754E00B638C2 /* EnglishWordLearningAITests */,
 				ABB884E82B76754E00B638C2 /* EnglishWordLearningAIUITests */,
 				ABB884CA2B76754B00B638C2 /* Products */,
+				E2A229F35EC7A09634B1C081 /* Pods */,
+				2BAD1E2F660F071898AD35EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -277,6 +304,19 @@
 			path = EnglishWordLearningAIUITests;
 			sourceTree = "<group>";
 		};
+		E2A229F35EC7A09634B1C081 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26B17D7735D30738E2F22FEB /* Pods-EnglishWordLearningAI.debug.xcconfig */,
+				BA9CFAEEA1C998DB5C56A815 /* Pods-EnglishWordLearningAI.release.xcconfig */,
+				090B9C43F98BD5BF616373F8 /* Pods-EnglishWordLearningAI-EnglishWordLearningAIUITests.debug.xcconfig */,
+				CB2F36F562DC0FCF278DC7C9 /* Pods-EnglishWordLearningAI-EnglishWordLearningAIUITests.release.xcconfig */,
+				86176994FD75950BCF32F212 /* Pods-EnglishWordLearningAITests.debug.xcconfig */,
+				65A7220C86D7AAEF5E4257F2 /* Pods-EnglishWordLearningAITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,9 +324,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABB884EF2B76754E00B638C2 /* Build configuration list for PBXNativeTarget "EnglishWordLearningAI" */;
 			buildPhases = (
+				698481A71DDDA893B2C0E58F /* [CP] Check Pods Manifest.lock */,
 				ABB884C52B76754B00B638C2 /* Sources */,
 				ABB884C62B76754B00B638C2 /* Frameworks */,
 				ABB884C72B76754B00B638C2 /* Resources */,
+				2A50255D82297725EA574124 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -306,6 +348,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABB884F22B76754E00B638C2 /* Build configuration list for PBXNativeTarget "EnglishWordLearningAITests" */;
 			buildPhases = (
+				E5C6A63A51CF4563CB20A24A /* [CP] Check Pods Manifest.lock */,
 				ABB884D72B76754E00B638C2 /* Sources */,
 				ABB884D82B76754E00B638C2 /* Frameworks */,
 				ABB884D92B76754E00B638C2 /* Resources */,
@@ -324,9 +367,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABB884F52B76754E00B638C2 /* Build configuration list for PBXNativeTarget "EnglishWordLearningAIUITests" */;
 			buildPhases = (
+				1899C9F06D5E828529E5EC0C /* [CP] Check Pods Manifest.lock */,
 				ABB884E12B76754E00B638C2 /* Sources */,
 				ABB884E22B76754E00B638C2 /* Frameworks */,
 				ABB884E32B76754E00B638C2 /* Resources */,
+				9536E3CC036422EC3A01247B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -410,6 +455,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1899C9F06D5E828529E5EC0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EnglishWordLearningAI-EnglishWordLearningAIUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A50255D82297725EA574124 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EnglishWordLearningAI/Pods-EnglishWordLearningAI-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EnglishWordLearningAI/Pods-EnglishWordLearningAI-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EnglishWordLearningAI/Pods-EnglishWordLearningAI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		698481A71DDDA893B2C0E58F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EnglishWordLearningAI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9536E3CC036422EC3A01247B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EnglishWordLearningAI-EnglishWordLearningAIUITests/Pods-EnglishWordLearningAI-EnglishWordLearningAIUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EnglishWordLearningAI-EnglishWordLearningAIUITests/Pods-EnglishWordLearningAI-EnglishWordLearningAIUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EnglishWordLearningAI-EnglishWordLearningAIUITests/Pods-EnglishWordLearningAI-EnglishWordLearningAIUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5C6A63A51CF4563CB20A24A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EnglishWordLearningAITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ABB884C52B76754B00B638C2 /* Sources */ = {
@@ -515,7 +663,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -578,7 +726,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -591,6 +739,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
@@ -599,6 +748,7 @@
 		};
 		ABB884F02B76754E00B638C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26B17D7735D30738E2F22FEB /* Pods-EnglishWordLearningAI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -629,6 +779,7 @@
 		};
 		ABB884F12B76754E00B638C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA9CFAEEA1C998DB5C56A815 /* Pods-EnglishWordLearningAI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -659,6 +810,7 @@
 		};
 		ABB884F32B76754E00B638C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86176994FD75950BCF32F212 /* Pods-EnglishWordLearningAITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -679,6 +831,7 @@
 		};
 		ABB884F42B76754E00B638C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65A7220C86D7AAEF5E4257F2 /* Pods-EnglishWordLearningAITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -699,6 +852,7 @@
 		};
 		ABB884F62B76754E00B638C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 090B9C43F98BD5BF616373F8 /* Pods-EnglishWordLearningAI-EnglishWordLearningAIUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -717,6 +871,7 @@
 		};
 		ABB884F72B76754E00B638C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB2F36F562DC0FCF278DC7C9 /* Pods-EnglishWordLearningAI-EnglishWordLearningAIUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

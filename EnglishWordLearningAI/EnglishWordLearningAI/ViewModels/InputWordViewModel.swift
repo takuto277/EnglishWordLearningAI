@@ -6,14 +6,32 @@
 //
 
 import Foundation
+import MLKitTranslate
 
 final class InputWordViewModel: ObservableObject {
-    var englishWord: String = "test"
-    // TODO: 入力値が日本語なら、英語翻訳/英語なら、日本語翻訳してそれぞれの値を返す処理
     //TODO: 文章生成APIRepository呼び出し処理(文章生成を実行予定)
     //TODO: 文章選択画面へ渡す値の詰め込み処理
-    func getNewWordData(text: String) -> NewWordData {
-        //TODO: 保持した値を詰め込んで返す
-        return NewWordData(englishWord: text, japansesWord: "日本語固定値", response: [SentenceResponse(englishSentence: text, japaneseSentence: "日本語文固定値")])
+    func getNewWordData(text: String, completion: @escaping (NewWordData?) -> Void) {
+        let options = TranslatorOptions(sourceLanguage: .japanese, targetLanguage: .english)
+            let japaneseEnglishTranslator = Translator.translator(options: options)
+        
+        let conditions = ModelDownloadConditions(
+            allowsCellularAccess: false,
+            allowsBackgroundDownloading: true
+        )
+        japaneseEnglishTranslator.downloadModelIfNeeded(with: conditions) { error in
+            guard error == nil else { return }
+
+            japaneseEnglishTranslator.translate(text) { translatedText, error in
+                      guard error == nil, let translatedText = translatedText else { return }
+                
+                completion(NewWordData(englishWord: translatedText, japansesWord: text, response: [SentenceResponse(englishSentence: translatedText, japaneseSentence: text)]))
+                      // Translation succeeded.
+                  }
+            // Model downloaded successfully. Okay to start translating.
+        }
+//        let options = TranslatorOptions(sourceLanguage: .en, targetLanguage: .de)
+//        let englishGermanTranslator = NaturalLanguage.naturalLanguage().translator(options: options)
+       
     }
 }

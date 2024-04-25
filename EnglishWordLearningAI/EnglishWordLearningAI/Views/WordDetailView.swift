@@ -21,6 +21,7 @@ struct WordDetailView<ViewModel: WordDetailViewModel>: View {
                     .frame(width: geometry.size.width * 0.5, height: geometry.size.width * 0.5)
                 
                 Text(viewModel.registerWordData.englishSentence)
+                    .padding()
                     .font(.custom("STBaoliTC-Regular", size: 20))
                     .foregroundColor(.black)
                     .frame(maxWidth: .infinity, alignment: .center)
@@ -28,6 +29,19 @@ struct WordDetailView<ViewModel: WordDetailViewModel>: View {
                     .font(.custom("STBaoliTC-Regular", size: 15))
                     .foregroundColor(.gray)
                     .frame(maxWidth: .infinity, alignment: .center)
+                
+                
+                Button {
+                    viewModel.startSound()
+                } label: {
+                    Image(systemName: "speaker.3.fill")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding()
+                .frame(width: geometry.size.width / 10)
                 
                 Spacer()
                 

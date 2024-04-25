@@ -15,7 +15,6 @@ class AwsRepositoryImpl: AwsRepository {
     /// - parameter inputText: 入力テキスト
     /// - Returns: String
     func getAIImage(inputText: String) async throws -> String {
-      //  guard networkState.isConnected else { throw APIError.network }
         let requestBody = CreateImageRequest(inputText: inputText)
         do {
             let result = try await api.getAIImage(parameter: requestBody)

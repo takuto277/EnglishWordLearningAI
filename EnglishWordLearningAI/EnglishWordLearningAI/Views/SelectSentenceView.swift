@@ -18,7 +18,8 @@ struct SelectSentenceView<ViewModel: SelectSentenceViewModel>: View {
         GeometryReader { geometry in
             // 単語名履歴
             VStack {
-                Text("単語名:\(viewModel.newWordData.englishWord), \(viewModel.newWordData.japansesWord)")
+                // 単語名
+                Text("入力された文章:\(viewModel.newWordData.englishWord), \(viewModel.newWordData.japansesWord)")
                     .padding()
                     .multilineTextAlignment(.leading)
                     .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.05)
@@ -28,17 +29,31 @@ struct SelectSentenceView<ViewModel: SelectSentenceViewModel>: View {
                 // 文章リスト
                 List {
                     ForEach(Array(viewModel.newWordData.response.enumerated()), id: \.0) { index, element in
-                        Button {
-                            viewModel.setSentenceNumber(number: index)
-                        } label: {
-                            Text(element.englishSentence)
-                                .font(.custom("STBaoliTC-Regular", size: 15))
-                                .foregroundColor(.black)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                            Text(element.japaneseSentence)
-                                .font(.custom("STBaoliTC-Regular", size: 10))
-                                .foregroundColor(.gray)
-                                .frame(maxWidth: .infinity, alignment: .leading)
+                        HStack {
+                            Button {
+                                viewModel.setSentenceNumber(number: index)
+                            } label: {
+                                Text(element.englishSentence)
+                                    .font(.custom("STBaoliTC-Regular", size: 15))
+                                    .foregroundColor(.black)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                Text(element.japaneseSentence)
+                                    .font(.custom("STBaoliTC-Regular", size: 10))
+                                    .foregroundColor(.gray)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                            }
+                            .frame(maxWidth: .infinity)
+                            
+                            Button {
+                                viewModel.startSound(number: index)
+                            } label: {
+                                Image(systemName: "speaker.3.fill")
+                                                    .padding()
+                                                    .background(Color.blue)
+                                                    .foregroundColor(.white)
+                                                    .cornerRadius(10)
+                            }
+                            .frame(width: geometry.size.width / 10)
                         }
                         .listRowBackground(viewModel.selectedSentenceNumber == index ? Color.positivePush : Color.clear)
                     }

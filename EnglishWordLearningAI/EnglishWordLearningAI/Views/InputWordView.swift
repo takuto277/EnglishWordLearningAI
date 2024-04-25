@@ -6,16 +6,20 @@
 //
 
 import SwiftUI
+import SVProgressHUD
 
 struct InputWordView<ViewModel: InputWordViewModel>: View {
     @Binding var navigationPath: [NavigationPath]
     @ObservedObject var viewModel: ViewModel
     @State private var text: String = ""
     @Environment(\.dismiss) var dismiss
+    @State private var showAlert = false
+    
     var body: some View {
         GeometryReader { geometry in
             VStack(alignment: .center) {
-                Text("入力された単語で英文を作成します。\n単語を入力してください。")
+                // TODO　入力された単語で英文を作成します。\n単語を入力してください。
+                Text("登録したい文章を翻訳します。\n日本語で文章を入力してください。")
                     .padding()
                     .multilineTextAlignment(.center)
                 ZStack(alignment: .topLeading) {
@@ -41,7 +45,15 @@ struct InputWordView<ViewModel: InputWordViewModel>: View {
                     .buttonStyle(NegativeButton())
                     
                     Button {
-                        navigationPath.append(.pathSelectSentence(viewModel.getNewWordData(text: self.text)))
+                        SVProgressHUD.show()
+                        viewModel.getNewWordData(text: self.text) { newWordData in
+                            SVProgressHUD.dismiss()
+                            if let newWordData = newWordData {
+                                navigationPath.append(.pathSelectSentence(newWordData))
+                            } else {
+                                showAlert = true
+                            }
+                        }
                     } label: {
                         Text("英文作成")
                             .font(.custom("STBaoliTC-Regular", size: 15))
@@ -55,6 +67,13 @@ struct InputWordView<ViewModel: InputWordViewModel>: View {
             }
             .padding()
             .frame(width: geometry.size.width)
+            .alert(isPresented: $showAlert) {
+                Alert(
+                    title: Text("注意"),
+                    message: Text("翻訳に失敗しました。\nやり直してください。"),
+                    dismissButton: .default(Text("OK"))
+                )
+            }
         }
     }
     
