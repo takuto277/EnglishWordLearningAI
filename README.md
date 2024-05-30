@@ -19,7 +19,7 @@
 - 使用環境
   - AWS, Lambda, API Gateway, Bedrock, S3
 - 画像生成
-  -  [参考サイト]([https://www.fsi.co.jp/blog/8843/](https://aws.amazon.com/jp/builders-flash/202402/bedrock-image-generation/?awsf.filter-name=*all))
+  - [参考サイト](https://aws.amazon.com/jp/builders-flash/202402/bedrock-image-generation/?awsf.filter-name=*all)
 - 例文生成
   - [参考サイト](https://qiita.com/miso_taku/items/0b495b75d669556621b5)
 
