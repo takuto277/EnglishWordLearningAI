@@ -8,5 +8,6 @@
 import Foundation
 
 struct Const {
-    static let API_BASE_URL = "https://64eb1tn9ca.execute-api.us-east-1.amazonaws.com/dev"
+    // APIエンドポイント塞いで使えなくしました。
+    static let API_BASE_URL = "canNotUse"
 }
